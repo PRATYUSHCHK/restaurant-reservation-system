@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./ViewReservation.css";
+import "./viewReservation.css";
 import toast from "react-hot-toast";
 
 const ViewReservation = () => {
