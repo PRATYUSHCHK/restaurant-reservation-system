@@ -16,7 +16,7 @@ const ViewReservation = () => {
   try {
 
     await axios.delete(
-      `http://localhost:4000/api/reservation/${id}`
+      `https://restaurant-backend-aapu.onrender.com/api/reservation/${id}`
     );
 
     setReservations(
@@ -37,7 +37,7 @@ const ViewReservation = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/reservation/all")
+      .get("https://restaurant-backend-aapu.onrender.com/api/reservation/send")
       .then((res) => {
         setReservations(res.data.reservations);
       })
