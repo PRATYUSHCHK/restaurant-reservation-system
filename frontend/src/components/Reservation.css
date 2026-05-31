@@ -1,0 +1,106 @@
+.reservation{
+    width: 100%;
+    min-height: 100vh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reservation_form_box{
+    width: 100%;
+    max-width: 700px;
+    background: #1e293b;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+}
+
+.reservation_form_box h1{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.reservation_form_box p{
+    text-align: center;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+.reservation_form_box form div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.reservation_form_box input{
+    width: 100%;
+    padding: 16px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: #334155;
+    color: white;
+    font-size: 1rem;
+}
+
+.reservation_form_box input::placeholder{
+    color: #cbd5e1;
+}
+
+.reservation_form_box input:focus{
+    border: 2px solid #ef4444;
+}
+
+.reservation_form_box button{
+    grid-column: span 2;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #ef4444;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.reservation_form_box button:hover{
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+
+@media(max-width: 768px){
+
+    .reservation_form_box{
+        padding: 30px;
+    }
+
+    .reservation_form_box form div{
+        grid-template-columns: 1fr;
+    }
+
+    .reservation_form_box button{
+        grid-column: span 1;
+    }
+
+    .reservation_form_box h1{
+        font-size: 2.2rem;
+    }
+}

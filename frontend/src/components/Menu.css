@@ -1,0 +1,179 @@
+/* ===== MENU PAGE ===== */
+
+.menu-page {
+  min-height: 100vh;
+  background: #0f172a;
+  color: white;
+  padding-bottom: 50px;
+}
+
+/* ===== HERO SECTION ===== */
+
+.menu-hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+}
+
+.menu-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.menu-hero p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.reserve-btn {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 50px;
+  background: #f59e0b;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reserve-btn:hover {
+  transform: translateY(-3px);
+  background: #d97706;
+}
+
+/* ===== SEARCH & FILTER ===== */
+
+.menu-controls {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.menu-controls input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.categories button {
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.categories button:hover {
+  background: #334155;
+}
+
+.categories .active {
+  background: #f59e0b;
+}
+
+/* ===== MENU GRID ===== */
+
+.menu-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* ===== CARD ===== */
+
+.menu-card {
+  background: #1e293b;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.menu-content {
+  padding: 20px;
+}
+
+.menu-content h3 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+/* ===== BADGES ===== */
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.veg-badge,
+.nonveg-badge,
+.popular-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.veg-badge {
+  background: #16a34a;
+}
+
+.nonveg-badge {
+  background: #dc2626;
+}
+
+.popular-badge {
+  background: #f59e0b;
+}
+
+/* ===== PRICE ===== */
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #f59e0b;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .menu-hero {
+    padding: 80px 20px 40px;
+  }
+
+  .menu-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
