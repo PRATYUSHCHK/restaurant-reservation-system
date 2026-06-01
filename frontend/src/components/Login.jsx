@@ -1,35 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import toast from "react-hot-toast";
 import "./Login.css";
-
 
 const Login = () => {
   const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const { data } = await axios.post(
+        "https://restaurant-backend-aapu.onrender.com/api/users/login",
+        {
+          email,
+          password,
+        }
+      );
+
+      toast.success(data.message);
+
+      localStorage.setItem("isLoggedIn", "true");
+
+      navigate("/dashboard");
+
+    } catch (error) {
+      toast.error(
+        error.response?.data?.message || error.message
+      );
+    }
+  };
+
   return (
     <div className="login-container">
       <div className="login-box">
         <h1>Login</h1>
 
-        <form>
+        <form onSubmit={handleLogin}>
           <input
             type="email"
             placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
 
           <input
             type="password"
             placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
           />
 
-          <button
-            type="button"
-            onClick={() => {
-            localStorage.setItem("isLoggedIn", "true");
-            navigate("/dashboard");
-  }}
->
+          <button type="submit">
             Login
           </button>
         </form>

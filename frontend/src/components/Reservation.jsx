@@ -15,11 +15,12 @@ const Reservation = () => {
     const navigate = useNavigate();
 
     const handleReservation = async (e)=>{
-        if (!/^[0-9]{10}$/.test(phone)) {
-  toast.error("Phone number must be exactly 10 digits");
-  return;
-}
         e.preventDefault();
+        if (!/^[0-9]{10}$/.test(phone)) {
+        toast.error("Phone number must be exactly 10 digits");
+        return;
+}
+        
         try{
             const {data} = await axios.post("https://restaurant-backend-aapu.onrender.com/api/reservation/send",{firstName,lastName,email,phone,date,time},
             {headers: {
