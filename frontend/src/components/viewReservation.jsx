@@ -37,7 +37,7 @@ const ViewReservation = () => {
 
   useEffect(() => {
     axios
-      .get("https://restaurant-backend-aapu.onrender.com/api/reservation/send")
+      .get("https://restaurant-backend-aapu.onrender.com/api/reservation/all")
       .then((res) => {
         setReservations(res.data.reservations);
       })
