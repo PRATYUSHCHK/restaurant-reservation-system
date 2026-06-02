@@ -4,7 +4,8 @@ import "./Menu.css";
 import pizza from '../images/Salami-pizza-hero.avif';
 import burger from '../images/image.png';
 import alfredo_pasta from '../images/alfredopasta.png';
-import chocolate_brownie from '../images/brownie.png'
+import chocolate_brownie from '../images/brownie.png';
+import Navbar from "./Navbar";
 const menuItems = [
   {
     id: 1,
@@ -62,6 +63,8 @@ const Menu = () => {
   });
 
   return (
+    <>
+    <Navbar></Navbar>
     <div className="menu-page">
       {/* Hero Section */}
       <section className="menu-hero">
@@ -131,7 +134,9 @@ const Menu = () => {
         ))}
       </div>
     </div>
+    </>
   );
+
 };
 
 export default Menu;

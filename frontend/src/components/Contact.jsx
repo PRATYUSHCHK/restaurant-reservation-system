@@ -1,8 +1,10 @@
 import React from "react";
 import "./Contact.css";
-
+import Navbar from "./Navbar";
 const Contact = () => {
   return (
+    <>
+    <Navbar></Navbar>
     <div className="contact-page">
       <div className="contact-container">
 
@@ -68,6 +70,7 @@ const Contact = () => {
 
       </div>
     </div>
+    </>
   );
 };
 

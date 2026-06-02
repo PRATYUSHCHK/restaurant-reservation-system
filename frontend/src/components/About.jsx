@@ -1,8 +1,11 @@
 import React from "react";
 import "./About.css";
+import Navbar from "./Navbar";
 
 const About = () => {
   return (
+    <>
+    <Navbar></Navbar>
     <div className="about-page">
 
       <section className="about-hero">
@@ -72,6 +75,7 @@ const About = () => {
       </section>
 
     </div>
+    </>
   );
 };
 

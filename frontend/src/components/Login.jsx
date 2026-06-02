@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import "./Login.css";
+import Navbar from "./Navbar";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -36,6 +37,8 @@ const Login = () => {
   };
 
   return (
+    <>
+    <Navbar></Navbar>
     <div className="login-container">
       <div className="login-box">
         <h1>Login</h1>
@@ -68,6 +71,7 @@ const Login = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 
